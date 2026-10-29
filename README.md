@@ -6,18 +6,18 @@ Each program is in its own Python code block for convenient copying on GitHub. E
 
 ```python
 import cv2
-# Load color image
+
 color_image = cv2.imread("image.jpg")
-# Load grayscale image
+
 gray_image = cv2.imread("image.jpg", cv2.IMREAD_GRAYSCALE)
-# Check images
+
 if color_image is None or gray_image is None:
    print("Image not found. Check the file path.")
    exit()
-# Display images
+
 cv2.imshow("Color Image", color_image)
 cv2.imshow("Grayscale Image", gray_image)
-# Convert color image to grayscale
+
 converted_gray = cv2.cvtColor(color_image, cv2.COLOR_BGR2GRAY)
 cv2.imshow("Converted Grayscale", converted_gray)
 cv2.waitKey(0)
